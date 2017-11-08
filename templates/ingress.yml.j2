@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ kubernetes_keel_ingress.name }}
+  namespace: {{ kubernetes_keel_namespace }}
+{% if kubernetes_keel_ingress.annotations %}
+  annotations:
+    {{ kubernetes_keel_ingress.annotations | to_nice_yaml | indent }}
+{% endif %}
+spec:
+{% if kubernetes_keel_ingress.tls %}
+  tls:
+    {{ kubernetes_keel_ingress.tls | to_nice_yaml | indent }}
+{% endif %}
+  rules:
+  - host: {{ kubernetes_keel_ingress.host }}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ kubernetes_keel_service }}
+          servicePort: 80

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ kubernetes_keel_configmap }}
+  namespace: {{ kubernetes_keel_namespace }}
+data:
+  poll: "{{ kubernetes_keel_poll }}"
+  helm-provider: "{{ kubernetes_keel_helm_provider }}"
+  project-id: "{{ kubernetes_keel_project_id }}"
+  pubsub: "{{ kubernetes_keel_pubsub }}"
+  slack.channels: "{{ kubernetes_keel_slack_channels }}"

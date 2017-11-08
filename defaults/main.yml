@@ -1,0 +1,41 @@
+---
+
+kubernetes_keel_image: "karolisr/keel:0.4.7"
+
+kubernetes_keel_namespace: "kube-system"
+kubernetes_keel_deployment: "keel-deployment"
+kubernetes_keel_service_account: "keel"
+kubernetes_keel_configmap: "keel"
+kubernetes_keel_secret: "keel"
+kubernetes_keel_app: "keel"
+kubernetes_keel_service: "keel"
+
+kubernetes_keel_node_selector: {}
+kubernetes_keel_replicas: 1
+kubernetes_keel_revision_history: 1
+
+kubernetes_keel_deployment_labels: {}
+kubernetes_keel_deployment_annotations: {}
+
+kubernetes_keel_resources:
+  limits:
+    memory: "256Mi"
+  requests:
+    memory: "64Mi"
+
+kubernetes_keel_setup_ingress: false
+kubernetes_keel_ingress:
+  name: "keel-ingress"
+  host: "keel.example.com"
+  annotations:
+  tls:
+
+kubernetes_keel_poll: 1
+kubernetes_keel_helm_provider: 0
+kubernetes_keel_pubsub: ""
+kubernetes_keel_project_id: ""
+kubernetes_keel_webhook_endpoint: ""
+kubernetes_keel_slack_token: ""
+kubernetes_keel_slack_channels: ""
+
+# vim: set ts=2 sw=2:
