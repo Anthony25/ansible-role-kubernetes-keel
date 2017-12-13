@@ -1,6 +1,6 @@
 ---
 
-kubernetes_keel_image: "karolisr/keel:0.4.7"
+kubernetes_keel_image: "karolisr/keel:0.5.1"
 
 kubernetes_keel_namespace: "kube-system"
 kubernetes_keel_deployment: "keel-deployment"
@@ -37,5 +37,6 @@ kubernetes_keel_project_id: ""
 kubernetes_keel_webhook_endpoint: ""
 kubernetes_keel_slack_token: ""
 kubernetes_keel_slack_channels: ""
+kubernetes_keel_slack_approvals_channel: ""
 
 # vim: set ts=2 sw=2:

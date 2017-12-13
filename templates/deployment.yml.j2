@@ -68,6 +68,11 @@ spec:
             configMapKeyRef:
               name: {{ kubernetes_keel_configmap }}
               key: slack.channels
+        - name: SLACK_APPROVALS_CHANNEL
+          valueFrom:
+            configMapKeyRef:
+              name: {{ kubernetes_keel_configmap }}
+              key: slack.approvals_channel
         command: ["/bin/keel"]
         livenessProbe:
           httpGet:
