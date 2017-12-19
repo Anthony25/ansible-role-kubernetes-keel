@@ -20,6 +20,22 @@ rules:
       - list
   - apiGroups:
       - ""
+    resources:
+      - configmaps
+    verbs:
+      - create
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    resourceNames:
+      - approvals
+    verbs:
+      - get
+      - update
+      - patch
+  - apiGroups:
+      - ""
       - extensions
       - apps
     resources:
