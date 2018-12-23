@@ -1,6 +1,6 @@
 ---
 
-kubernetes_keel_image: "karolisr/keel:0.8.6"
+kubernetes_keel_image: "karolisr/keel:0.12.0"
 
 kubernetes_keel_namespace: "kube-system"
 kubernetes_keel_deployment: "keel-deployment"
