@@ -11,45 +11,11 @@ kind: ClusterRole
 metadata:
   name: keel-clusterrole
 rules:
-  - apiGroups:
-      - ""
-    resources:
-      - namespaces
-    verbs:
-      - watch
-      - list
-  - apiGroups:
-      - ""
-    resources:
-      - configmaps
-    verbs:
-      - create
-  - apiGroups:
-      - ""
-    resources:
-      - configmaps
-    resourceNames:
-      - approvals
-    verbs:
-      - get
-      - update
-      - patch
-  - apiGroups:
-      - ""
-      - extensions
-      - apps
-    resources:
-      - pods
-      - replicasets
-      - replicacontrollers
-      - statefulsets
-      - deployments
-      - jobs
-    verbs:
-      - get
-      - watch
-      - list
-      - update
+  - apiGroups: ['*']
+    resources: ['*']
+    verbs: ['*']
+  - nonResourceURLs: ['*']
+    verbs: ['*']
 
 ---
 
